@@ -18,6 +18,8 @@ public class CustomerController {
 
     @Autowired
     private TradeService tradeService;
+
+    @Autowired
     private CustomerService customerService;
 
     @GetMapping("/{customerId}")

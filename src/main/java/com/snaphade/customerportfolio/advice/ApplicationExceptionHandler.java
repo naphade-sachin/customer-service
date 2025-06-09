@@ -46,7 +46,7 @@ public class ApplicationExceptionHandler {
 
 
     private ProblemDetail build(HttpStatus httpStatus, Exception ex, Consumer<ProblemDetail> consumer){
-        var problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
+        var problemDetail = ProblemDetail.forStatusAndDetail(httpStatus, ex.getMessage());
         consumer.accept(problemDetail);
         return problemDetail;
     }
